@@ -6,7 +6,7 @@ var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 
 gulp.task("scss", function(){
-	gulp.src("./src/scss/app.scss")
+	gulp.src("./src/scss/*.scss")
 	.pipe(sass().on("error", sass.logError))
 	.pipe(uglifycss({
 		"maxLineLen": 100000,
@@ -17,6 +17,6 @@ gulp.task("scss", function(){
 // need to download the plugins before running them
 });
 
-gulp.task("watch"),function(){
-	gulp.watch("src/scss/*.scss",["scss"]);
-};
+gulp.task("watch",function(){
+	gulp.watch("./src/scss/*.scss",["scss"])
+});
