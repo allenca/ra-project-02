@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <!-- CSS reset and style sheet -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    
+    <!-- links to Google Fonts for Playfair Display and Raleway -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500,500i" rel="stylesheet">
+        
+    <!-- link to make the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- link to font awesome social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- links for jQuery slider -->
+    <link rel="stylesheet" type="text/css" href="CSS/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="JS/app.js"></script>
+    <script type="text/javascript" src="JS/owl.carousel.min.js"></script>   
+
+    <title>Aloha Apparel Co.</title>
+  </head>
+
+  <body>
+    <main>    
+      <!-- header section with logo, cart, and navbar -->
+      <header class="header">
+        <div class="logo">
+          <img src="assets/images/aloha-logo.svg" alt="logo">
+        </div> 
+    
+        <nav class= "navbar font-Playfair">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </nav>  
+        
+         <div class= "cart">
+            <img src="assets/images/cart-icon.svg" alt="cart icon">
+            <input id="cartQty" type="text" name="cartQty" value="0">
+        </div> 
+      </header>
+
+    <!-- banner with announcements -->
+      <section class="banner">
+        <div class="container banner-text">
+          <h1 class="banner-h1 text-shadow font-Raleway">NEW COLLECTION</h1>
+          <h2 class="banner-h2 text-shadow font-Playfair">Spring/Summer 2016</h2>
+        </div>
+      </section>    
+    
+    <!-- slogan and description -->
+      <section class="about">
+        <div class="container">
+            <h3 class="h3-text">Hand Crafted&#160;<span>Styles</span>
+                <p class="fontR">Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
+            </h3>    
+    </section>
+      
+    <!-- line that divides the sections -->
+      <section>
+        <hr>
+      </section>
+
+    <!-- categories section -->
+      <section id="product-category">
+        <div class="Category">
+          <div class="wide mens"> 
+            <p class="category-name">Men's</p>
+          </div>
+          <div class="square trends">
+            <p class="category-name">trends</p>
+          </div>
+          <div class="square glasses">
+            <p class="category-name">glasses</p>
+          </div>
+          <div class="square sale">
+            <p class="category-name">sale</p>
+          </div>
+          <div class="square bags">
+            <p class="category-name">bags</p>
+          </div>
+          <div class="wide womens">
+            <p class="category-name">women's</p>
+          </div>
+        </div>  
+      </section>
+
+    <!-- product types and specific items -->
+      <section id="products" class="container">
+        <div class="popular-items">
+          <h3 class="h3-text">Most-Loved&#160;<span>Products</span></h3>
+        </div>
+        
+        <div class="owl-carousel owl-theme item">
+          <div>
+            <img src="assets/images/checked-stretch-dress.jpg" alt="Checked Stretch Dress">
+            <h1>DRESSES</h1>
+            <h4>Checked Stretch Dress</h3>
+            <p>$129.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div>
+
+          <div>
+            <img src="assets/images/cotton-yellow-tshirt.jpg" alt="Cotton Yellow Shirt">
+            <h1>SHIRTS</h1>
+            <h4>Cotton Yellow Shirt</h4>
+            <p>$29.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div> 
+          
+           <div> 
+            <img src="assets/images/stretch-knit-dress.jpg" alt="Stretch Knit Dress">
+            <h1>DRESSES</h1>
+            <h4>Stretch Knit Dress</h4>
+            <p>$169.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div>
+          
+          <div>
+            <img src="assets/images/blue-hipster-backpack.jpg" alt="Blue Hipster Backpack">
+            <h1>BAGS</h1>
+            <h4>Blue Hipster Backpack</h4>
+            <p>$69.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div> 
+
+          <div>
+            <img src="assets/images/blue-silk-dress.jpg" alt="Blue Silk Dress">
+            <h1>DRESSES</h1>
+            <h4>Blue Silk Dress</h4>
+            <p>$129.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div>          
+          
+          <div>
+            <img src="assets/images/demin-overall-shorts.jpg" alt="Denim Overall Shorts">
+            <h1>PANTS</h1>
+            <h4>Denim Overall Shorts</h4>
+            <p>$99.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div>
+
+          <div>
+            <img src="assets/images/pink-dotted-dress.jpg" alt="Pink Dotted Dress">
+            <h1>DRESSES</h1>
+            <h4>Pink Dotted Dress</h4>
+            <p>$139.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div> 
+
+          <div>
+            <img src="assets/images/cotton-blue-shirt.jpg" alt="Cotton Blue Shirt">
+            <h1>SHIRTS</h1>
+            <h4>Cotton Blue Shirt</h4>
+            <p>$89.00</p>
+            <button class="addtocart">Add to cart</button>
+          </div>           
+        </div>
+      </section>
+
+        <!-- subscribe option for users to input their emails -->
+      <section class="subscribe">
+        <div class="container">
+          <h3 class="h3-text"> Sign-Up for&#160;<span>Updates</span></h3>
+          <p>Stay updated on our latest product releases, be first to find out about</p>
+          <p>upcoming sales, and get free style tips from our blog. Unsubscribe at anytime.</p>
+
+          <div class="sub-Form">
+            <input class="email floatL border-none" type="text" placeholder="Your Email">
+            <input class="submitButton" type="submit" value="Subscribe">
+          </div>
+        </div>           
+      </section>
+    </main>
+  </body>
+
+  <!-- Copyright and Aloha Apparel contact information -->
+  <footer class="clear footer"> 
+    
+      <div id="contact" class="social">
+        <address>
+          <p class="address-padding">&copy; 2016 Aloha Apparel Co.<br>Powered by HTML and CSS.</p>
+          <p class="address-padding">604-604-6040.
+          <a href="mailto:info@alohaapparel.com"><u>info@alohaapparel.com</u></a></p>
+          <p>1490 W Broadway<br>Vancouver, BC, Canada</p>     
+        </address>
+      </div>
+          <div id="social-media" class="social font-Raleway">
+            <ul>
+              <li><a href="#" class="textdecoration"><i class="fa fa-facebook facebook"></i><span class="media">&#160;&#160;&#160;Facebook</span></a></li>
+              <li><a href="#" class="textdecoration "><i class="fa fa-twitter twitter"></i><span class="media">&#160;&#160;&#160;Twitter</span></a></li>
+              <li><a href="#" class="textdecoration"><i class="fa fa-instagram instagram"></i><span class="media">&#160;&#160;&#160;Instagram</span></a></li>
+              <li><a href="#" class="textdecoration"><i class="fa fa-pinterest pinterest"></i><span class="media">&#160;&#160;&#160;Pinterest</span></a></li>
+              <li><a href="#" class="textdecoration"><i class="fa fa-google-plus google"></i><span class="media">&#160;&#160;&#160;Google+</span></a></li>
+            </ul>
+          </div>
+    
+      <script src="JS/owl.carousel.min.js"></script>
+  </footer>
+</html>
