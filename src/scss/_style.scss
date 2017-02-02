@@ -17,6 +17,7 @@ span {
   font-family: "Playfair Display", serif;
   font-style: normal;
   font-weight: bold;
+  font-color: green;
 }
 
 hr {
@@ -165,9 +166,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.5),transparent), 
-  url("../assets/images/banner-girl.png") center bottom no-repeat,
-  url("../assets/images/flower-bkgd.jpg") center repeat-x;
+  url("../images/banner.jpg") center repeat-x;
   background-size: cover, 26vh 56vh, cover;
   position: relative;
   min-height: 80vh;
@@ -237,9 +236,9 @@ hr {
   transform: translateY(50%);
 }
 
-.wide.mens {
+.wide.laptops {
   background: linear-gradient(rgba(0,0,0,0.5),transparent),
-    url("../assets/images/mens-category.jpg") no-repeat center center;
+    url("../images/laptop-category.jpg") no-repeat center center;
   background-size: cover;     
 }
 
@@ -585,9 +584,7 @@ li {
 }
 
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.5),transparent), 
-  url("../assets/images/banner-girl.png") center bottom no-repeat, 
-  url("../assets/images/flower-bkgd.jpg") center repeat-x;
+  url("../images/banner.jpg") center repeat-x;
   background-size: cover, 36vh 80vh, cover;
   min-height: 110vh;
 }
