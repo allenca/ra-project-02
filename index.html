@@ -4,9 +4,8 @@
     <!-- CSS reset and style sheet -->
     <link rel="stylesheet" type="text/css" href="dist/css/app.css">
     
-    <!-- links to Google Fonts for Playfair Display and Raleway -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500,500i" rel="stylesheet">
+    <!-- links to Google Fonts for Roboto Mono and Roboto -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100" rel="stylesheet">
         
     <!-- link to make the webpage responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,10 +28,10 @@
       <!-- header section with logo, cart, and navbar -->
       <header class="header">
         <div class="logo">
-          <img src="src/images/aloha-logo.svg" alt="logo">
+          <img src="src/images/aloha-logo.svg" alt="aloha-logo">
         </div> 
     
-        <nav class= "navbar font-Playfair">
+        <nav class= "navbar font-Roboto-Mono">
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Shop</a></li>
@@ -42,7 +41,7 @@
         </nav>  
         
          <div class= "cart">
-            <img src="src/images/cart-icon.svg" alt="cart icon">
+            <img src="src/images/cart-icon.svg" alt="cart-icon">
             <input id="cartQty" type="text" name="cartQty" value="0">
         </div> 
       </header>
@@ -50,17 +49,17 @@
     <!-- banner with announcements -->
       <section class="banner">
         <div class="container banner-text">
-          <h1 class="banner-h1 font-Raleway">WANT TO BUY</h1>
-          <h2 class="banner-h2 font-Playfair">COOL SHIT FROM BEST BUY?</h2>
-          <button>Click Here</button>
+          <h1 class="banner-h1 font-Roboto">WANT TO BUY</h1>
+          <h2 class="banner-h2 font-Roboto">COOL SHIT FROM BEST BUY?</h2>
+          <button class="click-here">Click Here</button>
         </div>
       </section>    
     
     <!-- slogan and description -->
       <section class="about">
         <div class="container">
-            <h3 class="h3-text">Have you ever wanted to&#160;<span>buy something?</span></h3>
-            <p class="fontR">Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+            <h3 class="h3-text">Have you ever wanted to&#160;<span class="text-green">buy something?</span></h3>
+            <p class="fontR text-grey">Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
         </div>
       </section>
       
@@ -70,22 +69,22 @@
     <!-- categories section -->
       <section id="product-category">
         <div class="Category">
-          <div class="wide laptops"> 
-            <p class="category-name">LAPTOPS</p>
+          <div class="wide laptop"> 
+            <p class="category-name">LAPTOPS/ULTRABOOKS</p>
           </div>
-          <div class="square trends">
+          <div class="square tv">
             <p class="category-name">4K TV'S</p>
           </div>
-          <div class="square glasses">
+          <div class="square home-audio">
             <p class="category-name">HOME AUDIO</p>
           </div>
-          <div class="square sale">
+          <div class="square tablet">
             <p class="category-name">TABLETS</p>
           </div>
-          <div class="square bags">
+          <div class="square desktop">
             <p class="category-name">DESKTOPS</p>
           </div>
-          <div class="wide womens">
+          <div class="wide cell">
             <p class="category-name">CELLPHONES</p>
           </div>
         </div>  
@@ -94,11 +93,12 @@
     <!-- product types and specific items -->
       <section id="products" class="container">
         <div class="popular-items">
-          <h3 class="h3-text">Most-Loved&#160;<span>Products</span></h3>
+          <h3 class="h3-text">YOU LIKE STUFF?</h3>
+            <p class="p-text text-grey">WE GOT STUFF</p>           
         </div>
         
         <div class="owl-carousel owl-theme item">
-          <div>
+          <!-- <div>
             <img src="../images/cell-category.jpg" alt="Checked Stretch Dress">
             <h1>DRESSES</h1>
             <h4>Checked Stretch Dress</h4>
@@ -160,28 +160,27 @@
             <h4>Cotton Blue Shirt</h4>
             <p>$89.00</p>
             <button class="addtocart">Add to cart</button>
-          </div>           
+          </div> -->           
         </div>
       </section>
 
         <!-- subscribe option for users to input their emails -->
       <section class="subscribe">
         <div class="container">
-          <h3 class="h3-text"> Sign-Up for&#160;<span>Updates</span></h3>
-          <p>Stay updated on our latest product releases, be first to find out about</p>
-          <p>upcoming sales, and get free style tips from our blog. Unsubscribe at anytime.</p>
+          <h3 class="h3-text">WANT TO GET CONSTANT UPDATES?</h3>
+          <p>GIVE US YOUR EMAIL AND WE WON'T STOP EMAILING YOU</p>
 
           <div class="sub-Form">
-            <input class="email floatL border-none" type="text" placeholder="Your Email">
-            <input class="submitButton" type="submit" value="Subscribe">
+            <input class="email floatL border-none" type="text">
+            <input class="submitButton" type="submit" value="SUBMIT">
           </div>
         </div>           
       </section>
     </main>
 
   <!-- Copyright and Aloha Apparel contact information -->
-  <footer class="clear footer">
-          <div id="social-media" class="social font-Raleway">
+  <footer class="footer">
+          <div id="social-media" class="social font-Roboto-Mono">
             <ul>
               <li><a href="#" class="textdecoration"><i class="fa fa-facebook facebook"></i><span class="media">&#160;&#160;&#160;Facebook</span></a></li>
               <li><a href="#" class="textdecoration "><i class="fa fa-twitter twitter"></i><span class="media">&#160;&#160;&#160;Twitter</span></a></li>
@@ -190,8 +189,10 @@
               <li><a href="#" class="textdecoration"><i class="fa fa-google-plus google"></i><span class="media">&#160;&#160;&#160;Google+</span></a></li>
             </ul>
           </div>
-      <script type="text/javascript" src="JS/owl.carousel.min.js"></script>
-      <!-- <script type="text/javascript" src="dist/js/app.js"></script> -->
   </footer>
+      
+      <!-- initialize carousel and bundle.js files as last page items to load -->
+      <script type="text/javascript" src="JS/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="./build/bundle.js"></script>
   </body>
 </html>

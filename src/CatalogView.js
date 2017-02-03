@@ -24,7 +24,24 @@ export default class CatalogView{
         belonging to that class) - see line 88 below.
          */
 
-        this.carousel = document.getElementsByClassName("container");
+       this.carousel = document.getElementsByClassName("container");
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1240:{
+            items:4
+        }
+    }
+  })
     }
 
     addProductsToCarousel(products){
