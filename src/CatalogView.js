@@ -4,44 +4,22 @@
 
 // this class is responsible for displaying the product data...
 // Perhaps in a carousel.
-export default class CatalogView{
+export default class CatalogView {
 
     constructor(){
         this.initCarousel();
+        this.handleClick();
+    }
 
+    handleClick(){
+        console.log("handle my click");
+        $(document).on("click .quickView", function() {
+            console.log("hello");
+        });
     }
 
     initCarousel(){
-        /*
-        You should initialize the flickicity carousel here.
-        Right now this code just adds the div tags you would need to add
-        inside the carousel 'container'.
-        Note that this.carousel refers to the div by its class attribute.
-        Since more than one tag can belong to the same class,
-        you either have to give the carousel tag an id as well...or
-        refer to the carousel div tag as this.carousel[0] using bracket
-        notation (since classes mean their *could* be more than one tag
-        belonging to that class) - see line 88 below.
-         */
-
-       this.carousel = document.getElementsByClassName("container");
-
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1240:{
-            items:4
-        }
-    }
-  })
+       this.carousel = document.getElementById("product-wrap");
     }
 
     addProductsToCarousel(products){
@@ -50,15 +28,7 @@ $('.owl-carousel').owlCarousel({
             return ; // do not do anything! there is no data
         }
 
-        /* the loop creates all the elements for each item in the carousel.
-         * it recreates the following structure
-         * <div class="product-wrapper">
-         * <img src="images/stretch-knit-dress.jpg" alt="Image of stretch knit dress" />
-         * <p class="product-type">Dresses</p>
-         * <h3>Stretch Knit Dress</h3>
-         * <p class="price">$169.00</p>
-         * </div>
-          * */
+        
         for (let p=0; p<products.length; p++){
             let product = products[p];
             console.log(product);
@@ -93,18 +63,22 @@ $('.owl-carousel').owlCarousel({
             let newPriceParaTextNode = document.createTextNode(product.regularPrice);
             newPricePara.appendChild(newPriceParaTextNode);
 
+            let quickView = document.createElement("button");
+            quickView.setAttribute("class","quickView");
+            quickView.innerHTML = "Add to Cart";
+
             /* you will need similar code to create
             an add to cart and a quick view button
             remember that each button you create should have
             a data-sku attribute that corresponds to the sku
             of each product.
             */
-
+            newDiv.appendChild(quickView);
             newDiv.appendChild(newImg);
             newDiv.appendChild(newPara);
             newDiv.appendChild(newH3Tag);
             newDiv.appendChild(newPricePara);
-            this.carousel[0].appendChild(newDiv);
+            this.carousel.appendChild(newDiv);
         }
 
     }

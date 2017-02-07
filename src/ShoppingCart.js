@@ -14,7 +14,11 @@ export default class ShoppingCart{
             console.log("Error! SessionStorage not supported in your browser!");
         }
     }
-
+    viewCart(){
+        $(".cart").on("click",function (){
+            $("#cart").show();
+        })
+    }
     initShoppingCart(){
         // create the sessionStorage object that will be used
         // to store the items.
