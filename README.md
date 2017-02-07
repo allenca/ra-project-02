@@ -1,6 +1,11 @@
 # ra-project-02
 Shopping Cart
 
+2017-02-07 (2)
+
+Tried to add another button this morning for Add To Cart. Broke the carousel. Please see 010 commit for correct product retrieval. I feel I needed more time to absorb the coding concepts. I felt discouraged from asking more questions because I wasn't able to form definite ones. It seemed the changes I made were not working.
+
+
 2017-02-07
 Despite the extension, I encountered numerous difficulties expressing the funtionality as code, as well as continuously debugging the code that I thought would work. 
 
