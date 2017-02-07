@@ -8,12 +8,20 @@ export default class CatalogView {
 
     constructor(){
         this.initCarousel();
-        this.handleClick();
+        this.handleQuickViewClick();
+        this.handleAddClick();
     }
 
-    handleClick(){
+    handleQuickViewClick(){
         console.log("handle my click");
         $(document).on("click .quickView", function() {
+            console.log("hello");
+        });
+    }
+
+    handleAddClick(){
+        console.log("handle it again");
+        $(document).on("click .AddToCart", function() {
             console.log("hello");
         });
     }
@@ -65,7 +73,11 @@ export default class CatalogView {
 
             let quickView = document.createElement("button");
             quickView.setAttribute("class","quickView");
-            quickView.innerHTML = "Add to Cart";
+            quickView.innerHTML = "Quick View";
+
+            let quickView = document.createElement("button");
+            quickView.setAttribute("class","AddToCart");
+            quickView.innerHTML = "Add To Cart";
 
             /* you will need similar code to create
             an add to cart and a quick view button
@@ -74,6 +86,7 @@ export default class CatalogView {
             of each product.
             */
             newDiv.appendChild(quickView);
+            newDiv.appendChild(AddToCart);
             newDiv.appendChild(newImg);
             newDiv.appendChild(newPara);
             newDiv.appendChild(newH3Tag);
