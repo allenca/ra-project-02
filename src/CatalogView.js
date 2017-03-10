@@ -1,42 +1,41 @@
-/**
- * Created by Edward_J_Apostol on 2017-01-28.
- */
-
-// this class is responsible for displaying the product data...
-// Perhaps in a carousel.
 export default class CatalogView {
-
     constructor(){
-        this.initCarousel();
         this.handleQuickViewClick();
         this.handleAddClick();
     }
 
-    handleQuickViewClick(){
-        console.log("handle my click");
-        $(document).on("click .quickView", function() {
-            console.log("hello");
-        });
-    }
-
-    handleAddClick(){
-        console.log("handle it again");
-        $(document).on("click .AddToCart", function() {
-            console.log("hello");
-        });
-    }
-
     initCarousel(){
        this.carousel = document.getElementById("product-wrap");
+
+       // owl carousel function
+        $(function(){
+            console.log('i am in the carousel');
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1240:{
+                        items:4
+                    }
+                }
+            });
+        });
     }
 
     addProductsToCarousel(products){
-
         if (products === undefined || products == null){
             return ; // do not do anything! there is no data
         }
-
         
+        let carousel = document.getElementById("product-wrap");
+
         for (let p=0; p<products.length; p++){
             let product = products[p];
             console.log(product);
@@ -45,7 +44,7 @@ export default class CatalogView {
 
             // create the DIV tag with class 'product-wrapper'
             let newDiv = document.createElement("div");
-            newDiv.setAttribute("class","product-wrapper");
+            newDiv.setAttribute("class","product-wrap");
 
             // create a new IMG tag. Suggest to add data-sku attribute here too
             // so that if you 'click' on the image, it would pop up a quick-view
@@ -75,9 +74,9 @@ export default class CatalogView {
             quickView.setAttribute("class","quickView");
             quickView.innerHTML = "Quick View";
 
-            let quickView = document.createElement("button");
-            quickView.setAttribute("class","AddToCart");
-            quickView.innerHTML = "Add To Cart";
+            let quickView2 = document.createElement("button");
+            quickView2.setAttribute("class","AddToCart");
+            quickView2.innerHTML = "Add To Cart";
 
             /* you will need similar code to create
             an add to cart and a quick view button
@@ -86,14 +85,35 @@ export default class CatalogView {
             of each product.
             */
             newDiv.appendChild(quickView);
-            newDiv.appendChild(AddToCart);
+            newDiv.appendChild(quickView2);
             newDiv.appendChild(newImg);
             newDiv.appendChild(newPara);
             newDiv.appendChild(newH3Tag);
             newDiv.appendChild(newPricePara);
-            this.carousel.appendChild(newDiv);
+            carousel.appendChild(newDiv);
         }
-
+        console.log('i am products to the html');
+        this.initCarousel();
     }
+    
+
+
+handleQuickViewClick(){
+    console.log("handle my click");
+    $(document).on("click .quickView", function() {
+        console.log("hello");
+    });
+}
+
+handleAddClick(){
+    console.log("handle it again");
+    $(document).on("click .AddToCart", function() {
+        console.log("hello");
+    });
+}
+
+
 
 }
+
+

@@ -1,9 +1,4 @@
-/**
- * Created by Edward_J_Apostol on 2017-01-29.
- */
-
 export default class ShoppingCart{
-
     constructor(){
         console.log("creating shopping cart");
         if(Storage){

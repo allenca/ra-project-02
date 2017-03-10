@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>    
-    <title>Aloha Apparel Co.</title>
+    <title>Aloha Co.</title> 
   </head>
 
   <body>
     <main>    
-      <!-- header section with logo, cart, and navbar -->
       <header class="header">
         <div class="logo">
           <img src="src/images/aloha-logo.svg" alt="aloha-logo">
@@ -71,79 +70,15 @@
         </div>  
       </section>
 
-    <!-- product types and specific items -->
+    <!-- product items -->
       <section id="products" class="container">
         <div class="popular-items">
           <h3 class="h3-text">YOU LIKE STUFF?</h3>
             <p class="p-text text-grey">WE GOT STUFF</p>           
         </div>
-        <div id="product-wrap"></div>
-        <div class="owl-carousel owl-theme item">
-          <!-- <div>
-            <img src="../images/cell-category.jpg" alt="Checked Stretch Dress">
-            <h1>DRESSES</h1>
-            <h4>Checked Stretch Dress</h4>
-            <p>$129.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div>
+        <div id="product-wrap" class=" owl-carousel owl-theme"></div>
+              </section>
 
-          <div>
-            <img src="assets/images/cotton-yellow-tshirt.jpg" alt="Cotton Yellow Shirt">
-            <h1>SHIRTS</h1>
-            <h4>Cotton Yellow Shirt</h4>
-            <p>$29.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div> 
-          
-           <div> 
-            <img src="assets/images/stretch-knit-dress.jpg" alt="Stretch Knit Dress">
-            <h1>DRESSES</h1>
-            <h4>Stretch Knit Dress</h4>
-            <p>$169.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div>
-          
-          <div>
-            <img src="assets/images/blue-hipster-backpack.jpg" alt="Blue Hipster Backpack">
-            <h1>BAGS</h1>
-            <h4>Blue Hipster Backpack</h4>
-            <p>$69.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div> 
-
-          <div>
-            <img src="assets/images/blue-silk-dress.jpg" alt="Blue Silk Dress">
-            <h1>DRESSES</h1>
-            <h4>Blue Silk Dress</h4>
-            <p>$129.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div>          
-          
-          <div>
-            <img src="assets/images/demin-overall-shorts.jpg" alt="Denim Overall Shorts">
-            <h1>PANTS</h1>
-            <h4>Denim Overall Shorts</h4>
-            <p>$99.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div>
-
-          <div>
-            <img src="assets/images/pink-dotted-dress.jpg" alt="Pink Dotted Dress">
-            <h1>DRESSES</h1>
-            <h4>Pink Dotted Dress</h4>
-            <p>$139.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div> 
-
-          <div>
-            <img src="assets/images/cotton-blue-shirt.jpg" alt="Cotton Blue Shirt">
-            <h1>SHIRTS</h1>
-            <h4>Cotton Blue Shirt</h4>
-            <p>$89.00</p>
-            <button class="addtocart">Add to cart</button>
-          </div> -->           
-        </div>
-      </section>
 
         <!-- subscribe option for users to input their emails -->
       <section class="subscribe">
@@ -159,7 +94,8 @@
       </section>
     </main>
 
-  <!-- Copyright and Aloha Apparel contact information -->
+
+  <!-- copyright and contact information -->
   <footer class="footer">
           <div id="social-media" class="social font-Roboto-Mono">
             <ul>
@@ -171,28 +107,26 @@
             </ul>
           </div>
   </footer>
-      
-    <!-- initialize carousel and bundle.js files as last page items to load -->
-    <script type="text/javascript" src="JS/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="./build/bundle.js"></script>
-
-    <!-- CSS reset and style sheet -->
-    <link rel="stylesheet" type="text/css" href="dist/css/app.css">
     
     <!-- links to Google Fonts for Roboto Mono and Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100" rel="stylesheet">
-        
-    <!-- link to make the webpage responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- link to font awesome social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- links for jQuery owl slider -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <!-- <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
+       <!-- link to make the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS reset and style sheet -->
+    <link rel="stylesheet" type="text/css" href="dist/css/app.css">
+
+    <!-- Initialize jQuery, Owl Carousel, and bundle.js files as last page items to load -->
+    <script type="text/javascript" src="./src/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/src/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="./build/bundle.js"></script>
+  
+
+    <!-- bootstrap link -->
+    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
   </body>
 </html>

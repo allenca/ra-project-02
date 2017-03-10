@@ -1,9 +1,4 @@
-/**
- * Created by Edward_J_Apostol on 2017-01-27.
- */
-
 export default class BestBuyWebService{
-
     constructor(){
         this.url ="";
         this.apiKey = "";

@@ -1,16 +1,17 @@
 import BestBuyWebService from './BestBuyWebService';
 import CatalogView from './CatalogView';
 import ShoppingCart from './ShoppingCart';
+// import ShoppingCartView from './ShoppingCartView';
 
 export default class App {
-
     constructor(){
         this.productData = null; // this will store all our data
         this.products = null; // stores specifically the products
         this.catalogView = new CatalogView(); // this will display our data
         this.shoppingCart = new ShoppingCart();
-        // call the initBestBuyWebService to initialize the
-        // BestBuy Web Service and return the data
+        // this.topCounter = new topCounter();
+        
+        // call the initBestBuyWebService to initialize the BestBuy Web Service and return the data
         this.initBestBuyWebService();
     }
 
@@ -24,7 +25,6 @@ export default class App {
 
         // pass the reference to this app to store the data, (this) means the entire app.js **important
         this.bbws.getData(this);
-
     }
 
     prepCatalog(){
@@ -35,9 +35,7 @@ export default class App {
             // only get the products property (for now)
             // this code was copied from SimpleHTTPRequest.html
             this.products = this.bbws.getProducts();
-
         }
-
         this.showCatalog();
     }
 
@@ -48,40 +46,23 @@ export default class App {
             this.catalogView.addProductsToCarousel(this.products);
             // this.catalogView.showCatalog();
         }
-
-
     }
 
+
+// topCounter(){
+//     // Counter for add to cart function
+//     // 1. check existing cart value   
+//     $(".addtocart").on("click", function (){
+
+//     // 2. add 1 to the value
+//     var inputField = parseInt($("#cartQty").val());
+//     inputField = inputField + 1; 
+//     $("#cartQty").val(inputField++);
+
+//     // 3. put value back in input
+//     $("#cartQty").show();
+//     })
+//     }
 }
 
-// Counter for add to cart function
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            1240:{
-                items:4
-            }
-        }
-    });
-    
-    // 1. check existing cart value   
-    $(".addtocart").on("click", function (){
 
-    // 2. add 1 to the value
-    var inputField = parseInt($("#cartQty").val());
-    inputField = inputField + 1; 
-    $("#cartQty").val(inputField++);
-    
-    // 3. put value back in input
-    $("#cartQty").show();
-  })
-});
