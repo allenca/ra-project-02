@@ -1,6 +1,6 @@
 import BestBuyWebService from './BestBuyWebService';
-import CatalogView from './CatalogView'
-import ShoppingCart from './ShoppingCart'
+import CatalogView from './CatalogView';
+import ShoppingCart from './ShoppingCart';
 
 export default class App {
 

@@ -14,7 +14,7 @@ resolve: figures out the full 'path' to a file or folder
 e.g. require ('webpack') means you need webpack (assuming you installed it)_
 
 */
-"use strict"
+
 const join = require('path').join;
 const resolve = require('path').resolve;
 const webpack = require('webpack');
