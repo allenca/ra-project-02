@@ -12,8 +12,10 @@ export default class CatalogView {
             console.log('i am in the carousel');
             $('.owl-carousel').owlCarousel({
                 loop:true,
-                margin:10,
+                items:4,
+                margin:50,
                 nav:true,
+                dots: true,
                 responsive:{
                     0:{
                         items:1
@@ -42,7 +44,7 @@ export default class CatalogView {
             // each product is a product object
             // use it to create the element
 
-            // create the DIV tag with class 'product-wrapper'
+            // create the DIV tag with class 'product-wrap'
             let newDiv = document.createElement("div");
             newDiv.setAttribute("class","product-wrap");
 
@@ -78,8 +80,7 @@ export default class CatalogView {
             quickView2.setAttribute("class","AddToCart");
             quickView2.innerHTML = "Add To Cart";
 
-            /* you will need similar code to create
-            an add to cart and a quick view button
+            /* adding to cart and a quick view button
             remember that each button you create should have
             a data-sku attribute that corresponds to the sku
             of each product.
@@ -98,22 +99,19 @@ export default class CatalogView {
     
 
 
-handleQuickViewClick(){
-    console.log("handle my click");
-    $(document).on("click .quickView", function() {
-        console.log("hello");
-    });
-}
+    handleQuickViewClick(){
+        console.log("handle my click");
+        $(document).on("click .quickView", function() {
+            console.log("hello");
+        });
+    }
 
-handleAddClick(){
-    console.log("handle it again");
-    $(document).on("click .AddToCart", function() {
-        console.log("hello");
-    });
-}
-
-
-
+    handleAddClick(){
+        console.log("handle it again");
+        $(document).on("click .AddToCart", function() {
+            console.log("hello");
+        });
+    }
 }
 
 
