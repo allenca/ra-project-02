@@ -1,7 +1,6 @@
 export default class CatalogView {
     constructor(){
-        this.handleQuickViewClick();
-        this.handleAddClick();
+        this.theApp = null;
     }
 
     initCarousel(){
@@ -15,7 +14,7 @@ export default class CatalogView {
                 items:4,
                 margin:50,
                 nav:true,
-                dots: true,
+                dots:true,
                 responsive:{
                     0:{
                         items:1
@@ -42,75 +41,93 @@ export default class CatalogView {
             let product = products[p];
             console.log(product);
             // each product is a product object
-            // use it to create the element
 
-            // create the DIV tag with class 'product-wrap'
+            // create the div tag with class 'product-wrap'
             let newDiv = document.createElement("div");
             newDiv.setAttribute("class","product-wrap");
 
-            // create a new IMG tag. Suggest to add data-sku attribute here too
+            let divForButtons = document.createElement("div");
+            newDiv.setAttribute("class","product-wrap");
+            divForButtons.setAttribute("style",`display:flex; justify-content:center;`);
+
+            // create a new IMG tag. Suggest to add sku attribute here too
             // so that if you 'click' on the image, it would pop up a quick-view
             // window and you can use the sku.
             let newImg = document.createElement("img");
             newImg.setAttribute("src", product.image);
-            newImg.setAttribute("alt", `${product.name}`); // this works too
-            newImg.setAttribute("data-sku",product.sku);
+            newImg.setAttribute("alt", `${product.name}`);
+            newImg.setAttribute("sku",product.sku);
 
             // create a new Paragraph to show a description
-            let newPara = document.createElement("p");
-            newPara.setAttribute("class","product-type");
-            let newParaTextNode = document.createTextNode(product.longDescription);
-            newPara.appendChild(newParaTextNode);
-
-            // create a new H3 tag to show the name
+            // let newPara = document.createElement("p");
+            // newPara.setAttribute("class","product-type");
+            // let newParaTextNode = document.createTextNode(product.longDescription);
+            // newPara.appendChild(newParaTextNode);
             let newH3Tag = document.createElement("h3");
             let newH3TagTextNode = document.createTextNode(product.name);
+            newH3Tag.setAttribute("style",`text-align:center;`);
             newH3Tag.appendChild(newH3TagTextNode);
 
+
+            // set variable to make a p tag,
+            // assign the p tag a class of regularPrice
+            // set variable to make a textnode with value of $regularPrice
+            // append the textnode to the p tag
             let newPricePara = document.createElement("p");
-            newPricePara.setAttribute("class","price");
-            let newPriceParaTextNode = document.createTextNode(product.regularPrice);
+            newPricePara.setAttribute("class","regularPrice");
+            newPricePara.setAttribute("style",`color:green; text-align:center;`);
+            let newPriceParaTextNode = document.createTextNode("$"+product.regularPrice);
             newPricePara.appendChild(newPriceParaTextNode);
 
             let quickView = document.createElement("button");
             quickView.setAttribute("class","quickView");
             quickView.innerHTML = "Quick View";
 
-            let quickView2 = document.createElement("button");
-            quickView2.setAttribute("class","AddToCart");
-            quickView2.innerHTML = "Add To Cart";
+            let addToCart = document.createElement("button");
+            addToCart.setAttribute("class","AddToCart");
+            addToCart.setAttribute("sku",product.sku);
+            addToCart.innerHTML = "Add To Cart";
+            addToCart.addEventListener("click",this.onClickCartButton(this.theApp,products),false); 
+            // on click, listen to the click, run the function onClickCartButton and pass it theApp and products data, 
+            // false means don't do anything else
 
-            /* adding to cart and a quick view button
-            remember that each button you create should have
-            a data-sku attribute that corresponds to the sku
-            of each product.
-            */
-            newDiv.appendChild(quickView);
-            newDiv.appendChild(quickView2);
+            // adding the created elements to the div
             newDiv.appendChild(newImg);
-            newDiv.appendChild(newPara);
+            // newDiv.appendChild(newPara);
             newDiv.appendChild(newH3Tag);
             newDiv.appendChild(newPricePara);
+            // document.getElementById("myElement");
+            newDiv.appendChild(divForButtons);
+            divForButtons.appendChild(quickView);
+            divForButtons.appendChild(addToCart);
             carousel.appendChild(newDiv);
+
+            // image
+            // manufacturer
+            // name
+            // regularPrice
         }
-        console.log('i am products to the html');
+        console.log('i am adding products to the html');
         this.initCarousel();
     }
     
+    // handleQuickViewClick(products){
+    //    return function(e) {
+    //     console.log(e);
+    //     // e.getAttribute(sku)
 
 
-    handleQuickViewClick(){
-        console.log("handle my click");
-        $(document).on("click .quickView", function() {
-            console.log("hello");
-        });
-    }
+    //    }  
+    // }
 
-    handleAddClick(){
-        console.log("handle it again");
-        $(document).on("click .AddToCart", function() {
-            console.log("hello");
-        });
+    onClickCartButton(){
+        // define this function, e is what happens after the click, it is a mouse event
+        let x = function(e){
+            let gettingTheSku = e.target.getAttribute("sku"); // getting the sku number from that product's button
+            theApp.ShoppingCart.addItemToCart(gettingTheSku, theApp); 
+            // run a function called addItemToCart once the button is clicked
+            // define addItemToCart now in shoppingcart.js
+        }
     }
 }
 

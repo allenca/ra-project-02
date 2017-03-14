@@ -20,7 +20,7 @@ export default class ShoppingCart{
         console.log("finished creating shopping cart");
     }
 
-    addItemToCart(sku){
+    addItemToCart(sku, theApp){
 
     }
 
@@ -28,7 +28,7 @@ export default class ShoppingCart{
 
     }
 
-    updateQuantityofItemInCart(sky,qty){
+    updateQuantityofItemInCart(sku,qty){
 
     }
 

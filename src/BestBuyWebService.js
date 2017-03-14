@@ -6,7 +6,6 @@ export default class BestBuyWebService{
         this.products = null;
     }
 
-
     getData(theApp){
         // theApp is a reference to the main app
         // we can pass information to it, including data
@@ -14,15 +13,10 @@ export default class BestBuyWebService{
 
         let serviceChannel = new XMLHttpRequest();
         let url = this.url;
-
-        /*
-        // *** To solve the issue of passing the data back to the main app...
-        // *** and eventually, to catalogView
-        // *** You could the addEventListener to call
-        // *** a different function which will have both
-        // *** the event object and dataPlaceHolder as parameters
-        // *** see http://bit.ly/js-passmoreargsevent
-         */
+        
+        // to solve the issue of passing the data back to the main app and eventually to catalogView,
+        // you could use addEventListener to call a different function which will have both
+        // the event object and dataPlaceHolder as parameters see http://bit.ly/js-passmoreargsevent      
 
         serviceChannel.addEventListener("readystatechange",this.resultsPreprocessor(theApp),false);
         serviceChannel.open("GET",url,true);
@@ -30,17 +24,16 @@ export default class BestBuyWebService{
     }
 
     resultsPreprocessor(theApp){
-        /*the addEventListener function near line 29 requires a proper function (an event handler) to be returned so we can create one to be returned.
-        */
+        /* the addEventListener function near line 29 requires a proper function (an event handler) to be returned 
+        so we can create one to be returned. */
         let thisService = this; // a reference to the instance created from this class
         let eventHandler = function(evt){
             thisService.results(evt,theApp)
         };
-        return eventHandler
+        return eventHandler;
     };
 
     results(evt,theApp){
-
         if (evt.target.readyState == 4 && evt.target.status == 200){
             // assign this instance's productData to be the responseText
             this.productData = evt.target.responseText;
@@ -63,7 +56,6 @@ export default class BestBuyWebService{
            this.products = jsonData.products;
            return this.products;
         }
-
         return; // if we have no data, return nothing
     }
 }

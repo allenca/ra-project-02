@@ -17,7 +17,7 @@ export default class App {
 
     initBestBuyWebService(){
         this.bbws = new BestBuyWebService();
-        // use your own API key for this (the one from Cody)
+        
         this.bbws.apiKey = "SXkiDh8lcFEAqyG6rDmJjlH4";
 
         // this uses 'backticks' for long multi-line strings
@@ -28,8 +28,7 @@ export default class App {
     }
 
     prepCatalog(){
-        // use this console.log to test the data
-        // console.log(this.productData);
+        // console.log(this.productData); testing the data
 
         if(this.productData!=null){
             // only get the products property (for now)
@@ -40,7 +39,6 @@ export default class App {
     }
 
     showCatalog() {
-
         // populate the catalog only if there are products
         if (this.productData != null) {
             this.catalogView.addProductsToCarousel(this.products);
