@@ -40,6 +40,8 @@ export default class CatalogView {
         for (let p=0; p<products.length; p++){
             let product = products[p];
             console.log(product);
+            // for every object in the array of products from bestbuy,
+            // do the following code
             // each product is a product object
 
             // create the div tag with class 'product-wrap'
@@ -105,7 +107,7 @@ export default class CatalogView {
             // image
             // manufacturer
             // name
-            // regularPrice
+
         }
         console.log('i am adding products to the html');
         this.initCarousel();
@@ -122,7 +124,7 @@ export default class CatalogView {
 
     onClickCartButton(){
         // define this function, e is what happens after the click, it is a mouse event
-        let x = function(e){
+        let skuFunction = function(e){
             let gettingTheSku = e.target.getAttribute("sku"); // getting the sku number from that product's button
             theApp.ShoppingCart.addItemToCart(gettingTheSku, theApp); 
             // run a function called addItemToCart once the button is clicked
